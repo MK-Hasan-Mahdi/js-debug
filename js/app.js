@@ -18,6 +18,7 @@ const isLiked = (id) => {
 const addToLiked = (id) => {
   // console.log(id);
   likedPostsId.push(id);
+  console.log(likedPostsId);
   showPosts(posts);
 };
 
@@ -146,6 +147,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  document.getElementById("liked").innerHTML = '';
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
