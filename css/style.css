@@ -246,12 +246,25 @@ img {
 }
 
 .qa-container{
-    color: #707070;
     font-size: 1.125rem;
     line-height: 1.75;
     border: 1px solid #a2d4d3;
     margin-top: 50px;
     margin-bottom: 10px;
+}
+.question-ans-title{
+  margin: 30px;
+}
+.img-event-loop{
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.question-container{
+  padding: 20px;
+  margin: 20px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -263,5 +276,8 @@ img {
 @media only screen and (max-width: 576px) {
   #posts {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #question-ans{
+    background-color: burlywood;
   }
 }
