@@ -18,14 +18,14 @@ const isLiked = (id) => {
 const addToLiked = (id) => {
   // console.log(id);
   likedPostsId.push(id);
-  // console.log(likedPostsId);
-  showPosts(posts);
+  const resetLikedPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+  // console.log(resetLikedPosts);
+  showPosts(resetLikedPosts);
 };
 
 const reportPost = (id) => {
   // console.log(id);
   reportedPostsId.push(id);
-  // console.log(reportedPostsId);
   const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
   showPosts(remainingPosts);
 };
@@ -39,16 +39,19 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById("question-ans").style.display = "block";
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById("question-ans").style.display = "none";
 
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
+    document.getElementById("question-ans").style.display = "none";
 
     displayReportedPosts();
   }

@@ -251,6 +251,7 @@ img {
     line-height: 1.75;
     border: 1px solid #a2d4d3;
     margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 992px) {

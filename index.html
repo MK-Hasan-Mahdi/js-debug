@@ -57,7 +57,7 @@
             <h1>Reported posts</h1>
         </div>
     </main>
-    <section class="qa-container container">
+    <section id="question-ans" class="qa-container container">
         <h3>Javascript Q&A</h3>
         <div class="question-container">
             <h5>How does Javascript works?</h5>
@@ -75,7 +75,7 @@
                 sub-tasks. Synchronous code executes first and simultaneously asynchronous codes also remaining to
                 executions. For example – if we execute 3 functions, first and last functions are synchronous and second
                 function is asynchronous. Synchronous code come from call stack and executes, but when an asynchronous
-                code come it pushed to event table, event table is responsible for asynchronous code to to the event
+                code come it pushed to event table, event table is responsible for asynchronous code to the event
                 queue after a specified time but in the meantime third code executes before asynchronous code executes.
                 Event loop continuously checks call stack. From event table when come second asynchronous code and run
                 it. Javascript though a single thread language but its execution do faster for browsers web-api and for
@@ -96,6 +96,7 @@
             </p>
         </div>
     </section>
+
     <footer></footer>
 
     <!-- add javascript  file  -->
