@@ -245,6 +245,14 @@ img {
   display: none;
 }
 
+.qa-container{
+    color: #707070;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    border: 1px solid #a2d4d3;
+    margin-top: 50px;
+}
+
 @media only screen and (max-width: 992px) {
   #posts {
     grid-template-columns: repeat(2, 1fr);

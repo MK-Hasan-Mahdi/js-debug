@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+            <a class="navbar-brand" href="#">Insta-Sohor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <i class="fa-solid fa-heart text-danger"></i>
+                    </li>
+
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </li>
+                </ul>
             </div>
-            <div id="liked">
-                <h1>Liked posts</h1>
-            </div>
+        </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+        <div id="posts">
+        </div>
+        <div id="liked">
+            <h1>Liked posts</h1>
+        </div>
 
-            <div id="reported">
-                <h1>Reported posts</h1>
-            </div>
-        </main>
-        <footer></footer>
+        <div id="reported">
+            <h1>Reported posts</h1>
+        </div>
+    </main>
+    <section class="qa-container container">
+        <h3>Javascript Q&A</h3>
+        <div class="question-container">
+            <h5>How does Javascript works?</h5>
+            <p>Ans: Javascript is a single single-threaded, high level programming language. It considered high level
+                because it’s don’t need direct interaction with computer operating system or hardware to run code. There
+                are two phases in javascript code executions level. Variable environment and code of execution, in
+                variable environment variable are assigned in memory without initializing. In execution environment
+                executes code line by line synchronous way. When a asynchronous function invoked another execution
+                environment also works together. It rendering program like call stack. DOM parser, CSS parser works with
+                Javascript engine like V8 engine, spider monkey etc. And all this happens together and gives us human
+                readable form.
+            </p>
+            <h5>What does do event loop?</h5>
+            <p>Ans: Event loop is responsible for executing code, collecting and processing events and executing queued
+                sub-tasks. Synchronous code executes first and simultaneously asynchronous codes also remaining to
+                executions. For example – if we execute 3 functions, first and last functions are synchronous and second
+                function is asynchronous. Synchronous code come from call stack and executes, but when an asynchronous
+                code come it pushed to event table, event table is responsible for asynchronous code to to the event
+                queue after a specified time but in the meantime third code executes before asynchronous code executes.
+                Event loop continuously checks call stack. From event table when come second asynchronous code and run
+                it. Javascript though a single thread language but its execution do faster for browsers web-api and for
+                node js c++.
+            </p>
+            <h5>Difference between local storage and session storage?</h5>
+            <p>Ans: HTTP protocol doesn’t track data for client response and request by server and client, so to solve
+                this problem local storage, session storage and cookies concepts come. Below are some difference between
+                local storage and session storage.
+                Local storage: local storage data not expired until we remove or expires.
+                Local storage data kept in browser though we close the browser.
+                It is accessible from any window.
 
-        <!-- add javascript  file  -->
-        <script src="./js/app.js"></script>
-    </body>
+                Session storage: session storage data will be closed when we close window or specific tab.
+                It remains until we close specific session, but not stored in local storage.
+                It accessible from same tab.
+
+            </p>
+        </div>
+    </section>
+    <footer></footer>
+
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+</body>
+
 </html>
